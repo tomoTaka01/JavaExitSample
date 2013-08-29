@@ -1,0 +1,13 @@
+apply plugin: 'java'
+    
+sourceSets {
+    main {
+        output.resourcesDir = 'build/classes/main'
+    }
+}
+
+manifest.mainAttributes("Main-class" : "JavaExitSample")
+
+task dispRes << {
+    println sourceSets.main.output.resourcesDir;
+}
